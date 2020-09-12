@@ -16,8 +16,8 @@ return [
     'controller-namespace' => null,
     'form-request-namespace' => 'App\\Http\\Requests',
     'model' => [
-        'namespace' => 'App\\',
-        'path' => app_path(),
+        'namespace' => 'App\\Models\\', // Laravel 8 
+        'path' => app_path('Models'), // Laravel 8 
         'paths' => [
             app_path(),
         ],
@@ -32,20 +32,20 @@ return [
     |
     | Here you may define defaults for the scaffolding. These will set
     | the checkboxes in the forms to be checked or not.
-    |
+    |   
     */
 
     'create' => [
-        'migration' => false,
+        'migration' => true, 
         'resource-controller' => false,
         'form-request' => false,
     ],
 
     'update' => [
-        'migration' => false,
+        'migration' => true,
     ],
 
     'delete' => [
-        'migration' => false,
+        'migration' => true,
     ],
 ];
